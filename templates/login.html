@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Register </title>
+    </head>
+    <body></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h1 class="word">Sign In</h1>
+             </div></br></br></br>
+            <h2 class="word">
+              {% block y %}
+
+
+             <form action="/login" method="POST">
+               <div class="msg">{{ msg }}</div>
+
+                <input placeholder="Name" autocomplete="off" type="text" name="name">
+                <br />
+                <input placeholder="Password" autocomplete="off" type="text" name="password">
+
+                <input type="submit" name="Login">
+             </form>
+
+          {% endblock %}
+            </h2>
+          </div>
+        </div>
+    </body>
+</html>

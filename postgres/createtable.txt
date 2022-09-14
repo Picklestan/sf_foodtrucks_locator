@@ -1,0 +1,39 @@
+CREATE EXTENSION citext;
+CREATE EXTENSION postgis;
+
+
+DROP TABLE IF EXISTS trucks;
+CREATE TABLE trucks  (
+    locationid	int PRIMARY KEY,
+    Applicant	text,
+    FacilityType	text,
+    cnn	int,
+    LocationDescription	text,
+    Address	text,
+    blocklot	text,
+    block	text,
+    lot	text,
+    permit	text,
+    status	text,
+    FoodItems	text,
+    X	float8,
+    Y	float8,
+    Latitude	float8,
+    Longitude	float8,
+    Schedule	text,
+    Approved	text,
+    Received	text,
+    PriorPermit	bool,
+    ExpirationDate	text,
+    Location	point
+
+);
+
+
+DROP TABLE IF EXISTS accounts;
+CREATE TABLE accounts  (
+   username citext PRIMARY KEY,
+   password varchar (64) not null,
+   email citext not null,
+   salt varchar (16)
+);
